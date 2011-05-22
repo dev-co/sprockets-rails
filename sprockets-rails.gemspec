@@ -8,7 +8,9 @@ Gem::Specification.new do |s|
     Plugin for Sprockets Rails integration
   EOS
 
-  s.files = []
+  s.files = [
+    'LICENSE'
+  ]
 
   s.add_dependency 'sprockets', '~> 2.0'
 
