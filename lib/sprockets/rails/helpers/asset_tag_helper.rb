@@ -1,4 +1,4 @@
-require "action_view/helpers"
+require 'action_view/asset_paths'
 
 module Sprockets
   module Rails
