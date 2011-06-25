@@ -36,7 +36,7 @@ class SprocketsHelperTest < ActionView::TestCase
   end
 
   test "javascript path" do
-    assert_equal "/assets/application-d41d8cd98f00b204e9800998ecf8427e.js",
+    assert_equal "/assets/application-3a7478a0f724cc7909d2c589f761cce2.js",
       asset_path(:application, "js")
 
     assert_equal "/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js",
@@ -54,7 +54,7 @@ class SprocketsHelperTest < ActionView::TestCase
   end
 
   test "javascript include tag" do
-    assert_equal '<script src="/assets/application-d41d8cd98f00b204e9800998ecf8427e.js" type="text/javascript"></script>',
+    assert_equal '<script src="/assets/application-3a7478a0f724cc7909d2c589f761cce2.js" type="text/javascript"></script>',
       javascript_include_tag(:application)
 
     assert_equal '<script src="/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js" type="text/javascript"></script>',
