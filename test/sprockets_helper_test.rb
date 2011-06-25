@@ -72,7 +72,7 @@ class SprocketsHelperTest < ActionView::TestCase
   end
 
   test "stylesheet path" do
-    assert_equal "/assets/application-68b329da9893e34099c7d8ad5cb9c940.css", asset_path(:application, "css")
+    assert_equal "/assets/application-03366f65fdaf5e9ca79cc684c4a340b9.css", asset_path(:application, "css")
 
     assert_equal "/assets/style-d41d8cd98f00b204e9800998ecf8427e.css", asset_path("style", "css")
     assert_equal "/assets/dir/style-d41d8cd98f00b204e9800998ecf8427e.css", asset_path("dir/style.css", "css")
@@ -85,7 +85,7 @@ class SprocketsHelperTest < ActionView::TestCase
   end
 
   test "stylesheet link tag" do
-    assert_equal '<link href="/assets/application-68b329da9893e34099c7d8ad5cb9c940.css" media="screen" rel="stylesheet" type="text/css" />',
+    assert_equal '<link href="/assets/application-03366f65fdaf5e9ca79cc684c4a340b9.css" media="screen" rel="stylesheet" type="text/css" />',
       stylesheet_link_tag(:application)
 
     assert_equal '<link href="/assets/style-d41d8cd98f00b204e9800998ecf8427e.css" media="screen" rel="stylesheet" type="text/css" />',
