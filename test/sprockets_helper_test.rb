@@ -12,7 +12,7 @@ class SprocketsHelperTest < ActionView::TestCase
   end
 
   test "asset path" do
-    assert_equal "/assets/logo-9c0a079bdd7701d7e729bd956823d153.png",
+    assert_equal "/assets/logo-d41d8cd98f00b204e9800998ecf8427e.png",
       asset_path("logo.png")
 
     assert_equal "/images/logo",
