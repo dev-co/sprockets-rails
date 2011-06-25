@@ -1,4 +1,5 @@
 require 'action_controller/railtie'
+require 'sprockets'
 require 'sprockets/rails/railtie'
 require 'sprockets/rails/helpers'
 
