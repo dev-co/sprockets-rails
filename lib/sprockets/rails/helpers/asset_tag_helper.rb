@@ -79,7 +79,6 @@ module Sprockets
           def asset_for(source, ext)
             source = source.to_s
             return nil if is_uri?(source)
-            source = rewrite_extension(source, nil, ext)
             assets[source]
           end
 
