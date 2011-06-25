@@ -19,6 +19,10 @@ module Sprockets
           self.use_sprockets = app.config.assets.enabled
         end
       end
+      
+      rake_tasks do
+        load 'tasks/assets.rake'
+      end
 
       # We need to configure this after initialization to ensure we collect
       # paths from all engines. This hook is invoked exactly before routes
