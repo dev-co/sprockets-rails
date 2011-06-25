@@ -3,6 +3,7 @@ module Sprockets
     autoload :Helpers, "sprockets/rails/helpers"
 
     class Railtie < ::Rails::Railtie
+      # TODO: move this using_coffee? stuff out to coffee-rails
       def self.using_coffee?
         require 'coffee-script'
         defined?(CoffeeScript)
