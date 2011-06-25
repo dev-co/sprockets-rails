@@ -39,7 +39,7 @@ class SprocketsHelperTest < ActionView::TestCase
     assert_equal "/assets/application-3a7478a0f724cc7909d2c589f761cce2.js",
       asset_path(:application, "js")
 
-    assert_equal "/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js",
+    assert_equal "/assets/xmlhr-b827aa1077d67d8938b9c0a1343a6bed.js",
       asset_path("xmlhr", "js")
     assert_equal "/assets/dir/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js",
       asset_path("dir/xmlhr.js", "js")
@@ -57,17 +57,17 @@ class SprocketsHelperTest < ActionView::TestCase
     assert_equal '<script src="/assets/application-3a7478a0f724cc7909d2c589f761cce2.js" type="text/javascript"></script>',
       javascript_include_tag(:application)
 
-    assert_equal '<script src="/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js" type="text/javascript"></script>',
+    assert_equal '<script src="/assets/xmlhr-b827aa1077d67d8938b9c0a1343a6bed.js" type="text/javascript"></script>',
       javascript_include_tag("xmlhr")
-    assert_equal '<script src="/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js" type="text/javascript"></script>',
+    assert_equal '<script src="/assets/xmlhr-b827aa1077d67d8938b9c0a1343a6bed.js" type="text/javascript"></script>',
       javascript_include_tag("xmlhr.js")
     assert_equal '<script src="http://www.example.com/xmlhr" type="text/javascript"></script>',
       javascript_include_tag("http://www.example.com/xmlhr")
 
-    assert_equal "<script src=\"/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js?body=1\" type=\"text/javascript\"></script>\n<script src=\"/assets/application-d41d8cd98f00b204e9800998ecf8427e.js?body=1\" type=\"text/javascript\"></script>",
+    assert_equal "<script src=\"/assets/dir/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js?body=1\" type=\"text/javascript\"></script>\n<script src=\"/assets/extra-d41d8cd98f00b204e9800998ecf8427e.js?body=1\" type=\"text/javascript\"></script>\n<script src=\"/assets/home-f635a55b29904e04e4106d169de7312f.js?body=1\" type=\"text/javascript\"></script>\n<script src=\"/assets/xmlhr-b827aa1077d67d8938b9c0a1343a6bed.js?body=1\" type=\"text/javascript\"></script>\n<script src=\"/assets/application-3a7478a0f724cc7909d2c589f761cce2.js?body=1\" type=\"text/javascript\"></script>",
       javascript_include_tag(:application, :debug => true)
 
-    assert_equal  "<script src=\"/assets/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js\" type=\"text/javascript\"></script>\n<script src=\"/assets/extra-d41d8cd98f00b204e9800998ecf8427e.js\" type=\"text/javascript\"></script>",
+    assert_equal  "<script src=\"/assets/xmlhr-b827aa1077d67d8938b9c0a1343a6bed.js\" type=\"text/javascript\"></script>\n<script src=\"/assets/extra-d41d8cd98f00b204e9800998ecf8427e.js\" type=\"text/javascript\"></script>",
       javascript_include_tag("xmlhr", "extra")
   end
 
@@ -100,7 +100,7 @@ class SprocketsHelperTest < ActionView::TestCase
     assert_equal '<link href="/assets/style-d41d8cd98f00b204e9800998ecf8427e.css" media="print" rel="stylesheet" type="text/css" />',
       stylesheet_link_tag("style", :media => "print")
 
-    assert_equal "<link href=\"/assets/style-d41d8cd98f00b204e9800998ecf8427e.css?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/application-68b329da9893e34099c7d8ad5cb9c940.css?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />",
+    assert_equal "<link href=\"/assets/dir/xmlhr-d41d8cd98f00b204e9800998ecf8427e.js?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/extra-d41d8cd98f00b204e9800998ecf8427e.js?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/home-f635a55b29904e04e4106d169de7312f.js?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/xmlhr-b827aa1077d67d8938b9c0a1343a6bed.js?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/application-03366f65fdaf5e9ca79cc684c4a340b9.css?body=1\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />",
       stylesheet_link_tag(:application, :debug => true)
 
     assert_equal "<link href=\"/assets/style-d41d8cd98f00b204e9800998ecf8427e.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />\n<link href=\"/assets/extra-d41d8cd98f00b204e9800998ecf8427e.css\" media=\"screen\" rel=\"stylesheet\" type=\"text/css\" />",
