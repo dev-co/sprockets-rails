@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
     'LICENSE'
   ]
 
-  s.add_dependency 'sprockets', '~> 2.0'
+  s.add_dependency 'sprockets', '~> 2.0.0.beta10'
 
-  s.authors = ["David Heinemeier Hansson"]
-  s.email   = "david@loudthinking.com"
+  s.authors = ["David Heinemeier Hansson", "Ryan Bigg"]
+  s.email   = ["david@loudthinking.com", "me@ryanbigg.com"]
 end
