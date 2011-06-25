@@ -13,6 +13,10 @@ Gem::Specification.new do |s|
   ]
 
   s.add_dependency 'sprockets', '~> 2.0.0.beta10'
+  
+  s.add_development_dependency 'mocha'
+  s.add_development_dependency 'sqlite3'
+  
 
   s.authors = ["David Heinemeier Hansson", "Ryan Bigg"]
   s.email   = ["david@loudthinking.com", "me@ryanbigg.com"]
