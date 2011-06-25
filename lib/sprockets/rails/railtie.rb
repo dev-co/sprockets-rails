@@ -3,16 +3,6 @@ module Sprockets
     autoload :Helpers, "sprockets/rails/helpers"
 
     class Railtie < ::Rails::Railtie
-      # TODO: move this using_coffee? stuff out to coffee-rails
-      def self.using_coffee?
-        require 'coffee-script'
-        defined?(CoffeeScript)
-      rescue LoadError
-        false
-      end
-
-      config.app_generators.javascript_engine :coffee if using_coffee?
-
       # Configure ActionController to use sprockets.
       initializer "sprockets.set_configs", :after => "action_controller.set_configs" do |app|
         ActiveSupport.on_load(:action_controller) do
