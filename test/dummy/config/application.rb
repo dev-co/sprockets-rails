@@ -1,6 +1,17 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+require "rails"
+
+%w(
+  action_controller
+  rails/test_unit
+).each do |framework|
+  begin
+    require "#{framework}/railtie"
+  rescue LoadError
+  end
+end
+
 
 Bundler.require
 
