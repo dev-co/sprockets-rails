@@ -1,1 +1,4 @@
+test/dummy/app/assets
+test/dummy/public/assets
 test/dummy/log
+test/dummy/tmp
